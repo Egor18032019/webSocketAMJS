@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Spring Boot WebSocket generate service</title>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+<noscript>
+    <h2>Sorry! Your browser doesn't support Javascript</h2>
+</noscript>
+<h1 class="title">Сервис генерации случайных последовательностей. </h1>
+
+<div id="length-page">
+    <div class="length-page-container">
+        <h2 class="title">Задайте длину массива длинной от 10 до 100 </h2>
+        <form id="setLengthForm" name="setLengthForm">
+            <p>Задайте длину: </p>
+            <input type="number" id="length" placeholder="длина от 10 до 100"
+                   autocomplete="off" max="100" min="10" value="10" step="1"
+                   class="form-control"/>
+            <div class="form-group">
+                <button type="submit" id="setLength" name="setLength" class="accent length-submit" value="length">
+                    ЗАДАТЬ
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="type-page" class="hidden">
+    <div class="type-page-container">
+        <h2 class="title">Выберите необходимый алгоритм генерации случайных последовательностей:</h2>
+        <div id="arrayArea">
+        </div>
+            <!--                - При нажатии на кнопку-->
+            <!--                «СГЕНЕРИРОВАТЬ»   условие из тз ! то есть две кнопки-->
+            <div class="form-group">
+                <button type="submit" id="typeGenerateButton" name="generate" class="accent username-submit"
+                        value="GENERATE">СГЕНЕРИРОВАТЬ
+                </button>
+                <button type="submit" id="typeAvtoButton" name="avto" class="accent username-submit"
+                        value="AUTO">АВТО
+                </button>
+            </div>
+
+    </div>
+</div>
+
+<div id="chat-page" class="hidden">
+    <div class="chat-container">
+
+        <div class="chat-header">
+            <h2>Сервис генерации случайных последовательностей. </h2>
+        </div>
+<!--        //TODO  перенести  -->
+        <div class="connecting">
+            Connecting...
+        </div>
+        <table id="messageArea"  border="1" >
+            <caption>Таблица случайных последовательностей. </caption>
+            <tr><th>№</th><th>Последовательность</th></tr>
+<!--и следующие тут -->
+        </table>
+        <form id="messageForm" name="messageForm" nameForm="messageForm">
+            <div class="form-group">
+                <div class="input-group clearfix">
+                    <input type="text" id="message" placeholder="Type a message..." autocomplete="off"
+                           class="form-control"/>
+                    <button type="submit" class="primary">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
