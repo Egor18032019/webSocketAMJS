@@ -22,12 +22,12 @@
 
  Сделано:
  - Главная страница:
- ![image]()
+ ![image](https://github.com/Egor18032019/webSocketAMJS/blob/dockuments/assets/%D0%92%D1%8B%D0%B1%D0%B5%D1%80%D0%B8%D1%82%20%D0%B4%D0%BB%D0%B8%D0%BD%D1%83%20%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%B0.png)
 - Выбор алгоритма
- ![image]()
+ ![image](https://github.com/Egor18032019/webSocketAMJS/blob/dockuments/assets/%D0%B2%D1%8B%D0%B1%D0%BE%D1%80%20%D1%82%D0%B8%D0%BF%D0%B0%20%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D0%B0.png)
 - Если нажали на кнопку СГЕНЕРИРОВАТЬ
- ![image]()
+ ![image](https://github.com/Egor18032019/webSocketAMJS/blob/dockuments/assets/%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%20%D0%BD%D0%B0%D0%B6%D0%B0%D1%82%D0%B8%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D1%83%20%D0%A1%D0%93%D0%95%D0%9D%D0%95%D0%A0%D0%98%D0%A0%D0%9E%D0%92%D0%90%D0%A2%D0%AC.png)
 - Если нажали на кнопку АВТО
- ![image]()
- через 10секунд
-  ![image]()
+ ![image](https://github.com/Egor18032019/webSocketAMJS/blob/dockuments/assets/%D0%9F%D0%BE%D1%81%D0%BB%D0%B5%20%D0%BD%D0%B0%D0%B6%D0%B0%D1%82%D0%B8%D0%B5%20%D0%BD%D0%B0%20%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D1%83%20%D0%90%D0%92%D0%A2%D0%9E.png)
+ через 10секунд ->  и далее подобное через каждые 10 секунд
+  ![image](https://github.com/Egor18032019/webSocketAMJS/blob/dockuments/assets/%D0%A7%D0%B5%D1%80%D0%B5%D0%B7%2010%20%D1%81%D0%B5%D0%BA%D1%83%D0%BD%D0%B4%20%20%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%20%D0%90%D0%B2%D1%82%D0%BE.png)
