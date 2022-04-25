@@ -42,17 +42,15 @@ public class ChatController {
         List<int[]> generateArray = generation.generate(lengthArray);
         chatMessage.setGenerateArray(generateArray);
         setGenerateArray(generateArray);
-        // Add username in web socket session
-        headerAccessor.getSessionAttributes().put("username", chatMessage.getAlgorithm());
+        // Add header in web socket session
+        headerAccessor.getSessionAttributes().put("length", chatMessage.getLength());
         return chatMessage;
     }
 
     @MessageMapping("/chat.sendTypeAndLength")  //аннотация гарантирует, что если сообщение отправляется на
     @SendTo("/topic/public") // куда будет послано итоговое сообщение
     public ChatMessage sendTypeAndLength(@Payload ChatMessage chatMessage) throws InterruptedException {
-        System.out.println("@ sendTypeAndLength sendTypeAndLength  ");
-        System.out.println();
-        if (chatMessage.getAlgorithm().equals("GENERATE")) {
+        if (chatMessage.getAlgorithm().equals(Const.GENERATE)) {
 //            При нажатии на кнопку «СГЕНЕРИРОВАТЬ»
 //            выдается 5 последовательностей чисел
 //            по 6 случайных чисел из каждого массива.
@@ -80,8 +78,6 @@ public class ChatController {
     // /app + /chat.sendMessage то  будет вызван метод sendMessage
     @SendTo("/topic/public") // куда будет послано итоговое сообщение
     public ChatMessage sendMessage(@Payload ChatMessage chatMessage) {
-        System.out.println(" !!!!!   ChatController sendMessage  ");
-        System.out.println();
         chatMessage.setContent("Задача сгенерировать 5 последовательностей простых чисел длинной " + chatMessage.getLength());
         return chatMessage;
     }

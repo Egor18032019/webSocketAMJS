@@ -168,8 +168,8 @@ button.accent {
     height: calc(100% - 150px);
 }
 
-#chat-page #messageForm {
-    padding: 20px;
+#messageArea {
+    margin: auto;
 }
 
 #chat-page ul li {
@@ -226,17 +226,6 @@ button.accent {
     color: #43464b;
 }
 
-#messageForm .input-group input {
-    float: left;
-    width: calc(100% - 85px);
-}
-
-#messageForm .input-group button {
-    float: left;
-    width: 80px;
-    height: 38px;
-    margin-left: 5px;
-}
 
 .chat-header {
     text-align: center;
@@ -250,11 +239,8 @@ button.accent {
 }
 
 .connecting {
-    padding-top: 5px;
     text-align: center;
     color: #777;
-    position: absolute;
-    top: 65px;
     width: 100%;
 }
 
@@ -284,13 +270,6 @@ button.accent {
         height: calc(100% - 120px);
     }
 
-    #messageForm .input-group button {
-        width: 65px;
-    }
-
-    #messageForm .input-group input {
-        width: calc(100% - 70px);
-    }
 
     .chat-header {
         padding: 10px;

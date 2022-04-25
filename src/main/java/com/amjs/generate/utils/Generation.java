@@ -9,7 +9,6 @@ import java.util.*;
 @Component
 public class Generation {
 
-
     // Метод для генерации последовательности  простых чисел заданной длины
     public static List<int[]> generate(int length) {
         // sequence длиной 5 в котором лежит массив
@@ -38,45 +37,35 @@ public class Generation {
             for (int w = 0; w < Const.COUNTSEQUENCE; w++) {
                 // получаем массив из которого будем дергать 6 чисел(по условию у него длина>10)
                 int[] arrayForParsing = oldSequence.get(w);
-                System.out.println(Arrays.toString(arrayForParsing));
                 Set<Integer> unicArray = new HashSet<>();
                 // из arrayForParsing берем random числа  и вставляем в Set пока длина <GENERATESEQUENCE
                 for (int i = 0; i < Const.GENERATESEQUENCE; i++) {
                     Random random = new Random();
-                    // крутиться пока не положит в unicArray
-                    while (unicArray.add(arrayForParsing[random.nextInt(arrayLength)])) {
-                        System.out.println("i " + i + ", w " + w);
+                     do {
+                        unicArray.add(arrayForParsing[random.nextInt(arrayLength)]);
                     }
+                    while (unicArray.size()==i) ;
                 }
                 int lengthForView = w + 1;
                 sequenceGenerate.put(lengthForView, unicArray);
             }
         }
-        System.out.println(sequenceGenerate.toString());
-        return sequenceGenerate;
+         return sequenceGenerate;
     }
 
     public Set<Integer> creatAutoSequence(List<int[]> generateArray) {
         Set<Integer> unicArray = new HashSet<>();
-
-
         Random random = new Random();
-
-            int arrayLength = generateArray.get(0).length;
-            System.out.println(unicArray.size());
-            while (unicArray.add(
+        int arrayLength = generateArray.get(0).length;
+        System.out.println(unicArray.size());
+        do {
+            unicArray.add(
                     generateArray.get(
                             random.nextInt(Const.COUNTSEQUENCE)
-                    )[random.nextInt(arrayLength)])) {
-                System.out.println(unicArray.size());
-                System.out.println(unicArray.size() < Const.COUNTSEQUENCE);
-                System.out.println(unicArray.toString());
-                if (unicArray.size()>=Const.COUNTSEQUENCE) break;
-            }
-
+                    )[random.nextInt(arrayLength)]);
+        } while (unicArray.size() < Const.COUNTSEQUENCE);
         return unicArray;
     }
-
     // проверка на простое число
     public static boolean isPrimeBruteForce(int number) {
         if (number < 0) return false;
@@ -87,5 +76,4 @@ public class Generation {
         }
         return true;
     }
-
 }
